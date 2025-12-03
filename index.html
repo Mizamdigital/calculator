@@ -27,7 +27,9 @@
           <div class="calculator-container">
             <!-- display-container -->
             <div class="display">
-              <div class="display-input" >0</div>
+              <div class="display-input" id="displayInput" >0</div>
+              <div id="displayOutput"></div>
+              <div class="roka">ROKA</div>
             </div>
             <!-- calculator content -->
              <div class="content-container">
@@ -37,47 +39,49 @@
                   <button class="row1-btn">MRC</button>
                   <button class="row1-btn">M-</button>
                   <button class="row1-btn">M+</button>
-                  <button class="row1-btn">√</button>
+                  <button class="row1-btn" onclick="squareRoot();">&radic;</button>
                   <button class="row1-btn">%</button>
                 </div>
                 <div class="first-content2">
                   <button class="row2-btn">→</button>
-                  <button class="row2-btn">7</button>
-                  <button class="row2-btn">8</button>
-                  <button class="row2-btn">9</button>
-                  <button class="row2-btn">÷</button>
+                  <button class="row2-btn" onclick="appendNumber('7');">7</button>
+                  <button class="row2-btn" onclick="appendNumber('8');">8</button>
+                  <button class="row2-btn" onclick="appendNumber('9');">9</button>
+                  <button class="row2-btn" onclick="appendOperator('/');">÷</button>
                 </div>
              </div>  
              <!-- middle row -->
              <div class="second-content">
-                 <button class="middle-row-btn">CE</button>
-                  <button class="middle-row-btn">4</button>
-                  <button class="middle-row-btn">5</button>
-                  <button class="middle-row-btn">6</button>
-                  <button class="middle-row-btn">×</button>
+                 <button class="middle-row-btn" onclick="clearDisplay();">CE</button>
+                  <button class="middle-row-btn" onclick="appendNumber('4');">4</button>
+                  <button class="middle-row-btn" onclick="appendNumber('5');">5</button>
+                  <button class="middle-row-btn" onclick="appendNumber('6');">6</button>
+                  <button class="middle-row-btn" onclick="appendOperator('*');">×</button>
              </div> 
              
              <div class="third-content">
               <!-- the last rows -->
                  <div class="third-content1">
                   <button class="third-row-btn">AC</button>
-                  <button class="third-row-btn">1</button>
-                  <button class="third-row-btn">2</button>
-                  <button class="third-row-btn">3</button>
-                  <button class="third-row-btn">-</button>
+                  <button class="third-row-btn" onclick="appendNumber('1');">1</button>
+                  <button class="third-row-btn" onclick="appendNumber('2');">2</button>
+                  <button class="third-row-btn" onclick="appendNumber('3');">3</button>
+                  <button class="third-row-btn" onclick="appendOperator('-');">-</button>
                 </div>
                 <div class="third-content2">
-                  <button class="third-row-btn">0</button>
-                  <button class="third-row-btn">00</button>
-                  <button class="third-row-btn">.</button>
-                  <button class="third-row-btn">=</button>
-                  <button class="third-row-btn">+</button>
+                  <button class="third-row-btn" onclick="appendNumber('0');">0</button>
+                  <button class="third-row-btn" onclick="appendNumber('00');">00</button>
+                  <button class="third-row-btn" onclick="appendDecimal();">.</button>
+                  <button class="third-row-btn" onclick="calculate();">=</button>
+                  <button class="third-row-btn" onclick="appendOperator('+');">+</button>
                 </div>
              </div>
              </div>
           </div>   
-      </section>
+      </section>  
        </div>
+       <div class="main"></div>
    </main> 
+   <script src="cal.js"></script>
 </body>
 </html>
